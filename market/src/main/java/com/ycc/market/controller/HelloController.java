@@ -5,6 +5,7 @@ import com.ycc.market.entity.User;
 import com.ycc.market.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -21,6 +22,7 @@ public class HelloController {
     }
 
     @RequestMapping("/register")
+    @ResponseBody
     public User getUser(User user){
         return userService.userRegister(user);
     }
